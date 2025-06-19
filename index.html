@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shella Waramena | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #eaf0f6; color: #222; overflow-x: hidden; }
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    p.tagline { font-size: 1.2rem; margin-bottom: 2rem; }
+    nav a {
+      margin: 0 1rem;
+      padding: 0.8rem 1.2rem;
+      background: #1d3557;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+    section {
+      padding: 5rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .particles {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js" class="particles"></div>
+  <header>
+    <h1>Shella Waramena</h1>
+    <p class="tagline">Digital Project Manager</p>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#background">Background</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="work">
+    <h2>Work</h2>
+    <ul>
+      <li>Project A – Description or short highlight</li>
+      <li>Project B – Description or short highlight</li>
+      <li>Project C – Description or short highlight</li>
+    </ul>
+  </section>
+
+  <section id="background">
+    <h2>Background</h2>
+    <p>I'm a Project Manager with four years of experience in the Product Development sector. Work with cross functional team in fast-paced environment of project managing.</p>
+    <p><strong>Education:</strong><br>
+      Master of Computer Science, University of Pamulang (2021)<br>
+      Bachelor of Computer Science, University of Pamulang (2017)
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:shellawaramena@gmail.com">shellawaramena@gmail.com</a></p>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 40 },
+        color: { value: "#999" },
+        shape: { type: "triangle" },
+        opacity: { value: 0.3 },
+        size: { value: 5 },
+        line_linked: { enable: true, distance: 150, color: "#aaa", opacity: 0.3, width: 1 },
+        move: { enable: true, speed: 2 }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          repulse: { distance: 100 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+</html>
