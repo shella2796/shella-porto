@@ -15,11 +15,13 @@
       height: 100%;
       overflow-x: hidden;
     }
-    .particles {
+    #particles-js {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      width: 100vw;
+      height: 100vh;
       z-index: -1;
+      top: 0;
+      left: 0;
     }
     header {
       height: 100vh;
@@ -51,7 +53,7 @@
   </style>
 </head>
 <body>
-  <div id="particles-js" class="particles"></div>
+  <div id="particles-js"></div>
   <header>
     <h1>Shella Waramena</h1>
     <p class="tagline">Digital Project Manager</p>
@@ -66,29 +68,53 @@
   <script>
     particlesJS("particles-js", {
       particles: {
-        number: { value: 40 },
-        color: { value: "#999" },
-        shape: { type: "triangle" },
-        opacity: { value: 0.3 },
-        size: { value: 5 },
+        number: { value: 50 },
+        color: { value: "#aaaaaa" },
+        shape: {
+          type: "circle",
+          stroke: { width: 0, color: "#000000" },
+          polygon: { nb_sides: 5 },
+        },
+        opacity: {
+          value: 0.3,
+          random: true,
+          anim: { enable: false }
+        },
+        size: {
+          value: 4,
+          random: true,
+          anim: { enable: false }
+        },
         line_linked: {
           enable: true,
           distance: 150,
-          color: "#aaa",
-          opacity: 0.3,
+          color: "#cccccc",
+          opacity: 0.4,
           width: 1
         },
-        move: { enable: true, speed: 2 }
+        move: {
+          enable: true,
+          speed: 1.6,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false
+        }
       },
       interactivity: {
         detect_on: "canvas",
         events: {
           onhover: { enable: true, mode: "repulse" },
-          onclick: { enable: true, mode: "push" }
+          onclick: { enable: true, mode: "push" },
+          resize: true
         },
         modes: {
+          grab: { distance: 200, line_linked: { opacity: 1 } },
+          bubble: { distance: 200, size: 8, duration: 2, opacity: 0.4 },
           repulse: { distance: 100 },
-          push: { particles_nb: 4 }
+          push: { particles_nb: 4 },
+          remove: { particles_nb: 2 }
         }
       },
       retina_detect: true
