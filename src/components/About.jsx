@@ -11,7 +11,7 @@ export default function About() {
         transition={{ type: "spring", stiffness: 80, damping: 10 }}
         viewport={{ once: true }}
       >
-        <img src="/assets/about-me.svg" alt="About Me Illustration" />
+        <img src="/assets/about.png" alt="About Me Illustration" className="w-[700px] h-[auto]" />
       </motion.div>
 
       <motion.div
@@ -26,16 +26,17 @@ export default function About() {
         </h2>
 
         <p className="text-[#71717A] text-sm/6 lg:text-base mt-5 lg:mt-10">
-          I'm a passionate full-stack developer specializing in **React.js & Node.js**. I thrive on blending technical expertise with sleek UI/UX design to build high-performing, user-friendly applications.
+          I'm a process-driven Project Manager with over 4 years of experience leading cross-functional teams in the fast-paced world of digital learning, content development, 
+          and product development. I'm passionate about delivering innovative solutions, managing projects from initiation to completion, 
+          and ensuring client satisfaction at every stage.       
         </p>
 
         <p className="text-[#71717A] text-sm/6 lg:text-base mt-3 lg:mt-5">
-          My web development journey started in **2015**, and since then, I've continuously evolved, taking on new challenges and keeping up with the latest technologies. Today, I build **cutting-edge web applications** using **Next.js, TypeScript, NestJS, TailwindCSS, Supabase, and more**.
+          My strength lies in collaborating with diverse teams to achieve quality outcomes while fostering strong client relationships. 
+          I thrive in dynamic environments where I can help turn ideas into successful, impactful projects.
         </p>
 
-        <p className="text-[#71717A] text-sm/6 lg:text-base mt-3 lg:mt-5">
-          Beyond coding, I enjoy sharing insights on **Twitter**, engaging with **Indie Hackers**, and following the journey of **early-stage startups**. Feel free to follow me on **Twitter** or check out my projects on **GitHub**.
-        </p>
+    
       </motion.div>
     </div>
   );

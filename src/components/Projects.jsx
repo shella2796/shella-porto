@@ -5,18 +5,32 @@ import { motion } from 'framer-motion';
 const projects = [
   {
     id: 1,
-    title: "Crypto Screener Application",
-    description: "A powerful tool for tracking and analyzing cryptocurrency trends in real-time.",
-    image: "/assets/project1.png",
-    link: "#"
+    title: "Indoxnito.com",
+    description: "Indoxnito.com is a privacy-focused, community-driven social platform where users can engage, connect, and vote transparently without compromising anonymity. I contributed to project management, ensuring smooth collaboration across teams to deliver a secure and user-friendly platform..",
+    image: "/assets/indox.png",
   },
   {
     id: 2,
-    title: "Stock Market Dashboard",
-    description: "An interactive dashboard to monitor stock prices and market trends efficiently.",
-    image: "/assets/project1.png",
+    title: "Voyage",
+    description: "Voyage is an AI-powered platform designed to support international student success through actionable insights, targeted outreach, and data-driven solutions. I contributed to project management, ensuring collaboration across teams to deliver a seamless and impactful product experience.",
+    image: "/assets/voyage.png",
     link: "#"
-  }
+  },
+  {
+    id: 3,
+    title: "TekenAja!",
+    description: "TekenAja! is a trusted digital signature platform with the highest security standards, certified by KOMINFO. It helps users sign documents easily and securely from anywhere, saving time and ensuring data protection.",
+    image: "/assets/dtb.png",
+    link: "#"
+  },
+   {
+    id: 4,
+    title: "By The Park!",
+    description: "A digital platform designed for a preschool to enhance collaboration between teachers and parents. Features include progress tracking, activity galleries, and communication tools to support an engaging, user-friendly experience.",
+    image: "/assets/btp.webp",
+    link: "#"
+  },
+  
 ];
 
 export default function Projects() {

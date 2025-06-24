@@ -33,7 +33,7 @@ export default function Home() {
             <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
               Hello, <TypeAnimation
                 sequence={[
-                  'I am Sathish Kumar',
+                  'I am Shella Waramena',
                   1000,
                   // 'I am a Web Developer',
                   // 1000,
@@ -46,16 +46,16 @@ export default function Home() {
               />
             </motion.h2>
             <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
-              <span className="font-extrabold">Fullstack</span>{" "}
+              <span className="font-extrabold">Project</span>{" "}
               <span
                 className="text-white font-extrabold"
                 style={{ WebkitTextStroke: "1px black" }}
               >
-                Developer
+                Manager
               </span>
             </motion.h2>
             <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
-              Based In <span className="font-extrabold">India.</span>
+              Based In <span className="font-extrabold">Indonesia.</span>
             </motion.h2>
           </motion.div>
 
@@ -65,7 +65,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            Passionate about technology, I specialize in Web Development and Web Designing. I’m focused on building innovative solutions and continuously expanding my skills. My goal is to grow as a developer and contribute to impactful projects in the tech industry.
+            Passionate about technology, I specialize in Project Management for web development and digital content projects. I focus on delivering innovative solutions through strong collaboration, clear communication, and effective planning. My goal is to lead teams to create impactful products and drive success in the tech industry.
           </motion.p>
 
           <motion.div
@@ -74,17 +74,23 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
           >
-            {[BiLogoGmail, IoLogoLinkedin, IoLogoTwitter, BsGithub].map((Icon, index) => (
-              <motion.a
-                key={index}
-                href="#"
-                className="bg-white p-2 lg:p-3 rounded border-2 border-black"
-                whileHover={{ scale: 1.1, backgroundColor: "#000", color: "#fff" }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Icon className="w-4 h-4 lg:w-5 lg:h-5" />
-              </motion.a>
-            ))}
+            {[
+  { icon: BiLogoGmail, url: "mailto:shellawaramena@gmail.com" },
+  { icon: IoLogoLinkedin, url: "https://www.linkedin.com/in/shellawaramena" },
+  { icon: BsGithub, url: "https://github.com/shella2796" },
+].map(({ icon: Icon, url }, index) => (
+  <motion.a
+    key={index}
+    href={url}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-white p-2 lg:p-3 rounded border-2 border-black"
+    whileHover={{ scale: 1.1, backgroundColor: "#000", color: "#fff" }}
+    whileTap={{ scale: 0.9 }}
+  >
+    <Icon className="w-4 h-4 lg:w-5 lg:h-5" />
+  </motion.a>
+))}
           </motion.div>
         </motion.div>
 
@@ -94,7 +100,9 @@ export default function Home() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
-          <img className="h-full w-full" src="/assets/hero-vector.svg" alt="Hero Vector" />
+         
+          <img className="max-w-[650px] w-full h-auto mx-auto" src="/assets/hero.png" alt="Hero Vector" />
+
         </motion.div>
       </div>
     </div>
