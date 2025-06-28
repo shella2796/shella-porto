@@ -10,7 +10,7 @@ export default function Skills() {
   { id: 1, name: "Jira", icon: <img src="/assets/jira.svg" alt="Jira" className="w-10 h-10" /> },
   { id: 2, name: "ClickUp", icon: <img src="/assets/clickup.svg" alt="ClickUp" className="w-10 h-10" /> },
   { id: 3, name: "Figma", icon: <img src="/assets/figma.svg" alt="Figma" className="w-10 h-10" /> },
-  { id: 4, name: "Google Workspace", icon: <img src="/assets/gsheets.svg" alt="Google Workspace" className="w-10 h-10" /> },
+  { id: 4, name: "Google Workspace", icon: <img src="/assets/gsheets.svg" alt="G-Suite" className="w-10 h-10" /> },
   { id: 5, name: "Slack", icon: <img src="/assets/slack.svg" alt="Slack" className="w-10 h-10" /> },
   { id: 6, name: "Telegram", icon: <img src="/assets/tele.svg" alt="Telegram" className="w-10 h-10" /> },
   { id: 9, name: "Asana", icon: <img src="/assets/asana.svg" alt="Asana" className="w-10 h-10" /> },
