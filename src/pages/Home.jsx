@@ -65,8 +65,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            Passionate about technology, I specialize in Project Management for web development and digital content projects. I focus on delivering innovative solutions through strong collaboration, clear communication, and effective planning. My goal is to lead teams to create impactful products and drive success in the tech industry.
-          </motion.p>
+           Project Manager with 5+ years of experience leading software, SaaS, EdTech, and digital transformation projects. Skilled in coordinating cross-functional teams, managing stakeholders, and delivering products from planning through deployment while ensuring quality, efficiency, and business impact.
 
           <motion.div
             className="flex items-center gap-x-5 mt-10 lg:mt-14"
