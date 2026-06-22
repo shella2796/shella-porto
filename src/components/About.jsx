@@ -26,9 +26,8 @@ export default function About() {
         </h2>
 
         <p className="text-[#71717A] text-sm/6 lg:text-base mt-5 lg:mt-10">
-          I'm a process-driven Project Manager with over 4 years of experience leading cross-functional teams in the fast-paced world of digital learning, content development, 
-          and product development. I'm passionate about delivering innovative solutions, managing projects from initiation to completion, 
-          and ensuring client satisfaction at every stage.       
+          I am a Project Manager with experience leading software development, digital learning, SaaS, and AI-driven projects. Throughout my career, I have worked closely with developers, designers, QA engineers, 
+          and business stakeholders to transform ideas into scalable digital products. My approach combines structured project management, clear communication, and a strong focus on delivering measurable results.   
         </p>
 
         <p className="text-[#71717A] text-sm/6 lg:text-base mt-3 lg:mt-5">
