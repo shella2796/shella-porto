@@ -1,14 +1,14 @@
-import React from 'react'
-
 export default function Footer() {
   return (
-    <div className='bg-black px-5 lg:px-28 py-3 lg:py-6 flex items-center justify-between mt-16'>
-      <img className='invert h-5 lg:h-9' src="/assets/light.png" alt="" />
-
-      <div className='text-white lg:font-semibold lg:text-sm font-normal text-[10px] text-right lg:space-y-3'>
-        <p>@ 2025 Personal Portfolio</p>
-        <p>Made by Shella</p>
+    <footer className="border-t border-white/10 bg-[#050507] py-8 text-xs text-[#9d98a3]">
+      <div className="mx-auto flex w-[min(calc(100%-28px),1200px)] flex-col items-start justify-between gap-5 sm:flex-row sm:items-center lg:w-[min(calc(100%-40px),1200px)]">
+        <p>© {new Date().getFullYear()} Shella Waramena</p>
+        <div className="flex flex-wrap gap-5">
+          <a href="https://www.linkedin.com/in/shellawaramena" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#f3efe9]">LinkedIn</a>
+          <a href="https://github.com/shella2796" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#f3efe9]">GitHub</a>
+          <a href="#home" className="transition-colors hover:text-[#f3efe9]">Back to top</a>
+        </div>
       </div>
-    </div>
-  )
+    </footer>
+  );
 }

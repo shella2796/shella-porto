@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        sora:["Sora", 'sans-serif']
+        sora:["Sora", 'sans-serif'],
+        galaxy:["DM Sans", "sans-serif"],
+        "serif-display":["Instrument Serif", "serif"]
       }
     },
   },
