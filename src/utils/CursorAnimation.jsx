@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 export default function CustomCursor() {
+  const reduceMotion = useReducedMotion();
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [cursorSize, setCursorSize] = useState(32); // Default size
 
@@ -39,10 +40,10 @@ export default function CustomCursor() {
 
   return (
     <motion.div
-      className="fixed bg-white rounded-full pointer-events-none mix-blend-difference z-50"
+      className="pointer-events-none fixed z-50 hidden rounded-full bg-white mix-blend-difference [@media(pointer:fine)]:block"
       style={{ width: cursorSize, height: cursorSize }}
       animate={{ x: cursorPosition.x - cursorSize / 2, y: cursorPosition.y - cursorSize / 2 }}
-      transition={{ type: "spring", stiffness: 200, damping: 20 }}
+      transition={reduceMotion ? { duration: 0 } : { type: "spring", stiffness: 200, damping: 20 }}
     />
   );
 }

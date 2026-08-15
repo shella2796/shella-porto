@@ -12,20 +12,20 @@ export default function About() {
         viewport={{ once: true, amount: 0.2 }}
       >
         <h2 className="font-serif-display text-[clamp(3rem,6vw,6rem)] font-normal leading-[0.95] tracking-[-0.03em]">
-          Structure, <span className="text-[#b04d6b]">with a pulse.</span>
+          I like making complicated things <span className="text-[#b04d6b]">less complicated.</span>
         </h2>
 
         <div className="max-w-xl">
-          <p className="section-label">Beyond the timeline</p>
+          <p className="section-label">About</p>
           <div className="space-y-5 text-base leading-8 text-[#9d98a3]">
             <p>
-              I’m a project manager who values clarity, accountability, and calm communication. I enjoy bringing structure to complex work—especially when a project involves multiple teams, changing requirements, and information scattered across different tools.
+              My work usually sits somewhere between people who know what they want, developers figuring out how to build it, and a deadline approaching suspiciously fast.
             </p>
             <p>
-              My approach is practical and collaborative. I ask questions early, document decisions clearly, and make sure every stakeholder understands what is happening, what is blocked, and what comes next.
+              I’ve spent the last several years coordinating digital products across distributed teams, translating business requirements into executable work, keeping communication moving, and making sure “done” actually means shipped.
             </p>
             <p>
-              Beyond delivery, I care about creating working environments where people can communicate honestly, solve problems effectively, and produce work with meaningful impact.
+              I’m technical enough to understand the conversation, but my real strength is connecting the pieces: people, priorities, requirements, documentation, and delivery.
             </p>
           </div>
         </div>
