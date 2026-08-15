@@ -4,31 +4,29 @@ const projects = [
   {
     id: 1,
     title: "Indoxnito",
-    orbit: "Privacy-first community platform",
-    meta: "Community Platform · Product Delivery",
-    description: "A privacy-focused community platform designed for anonymous discussion, engagement, and transparent voting. I coordinated priorities across product, development, QA, and stakeholders, helping the team move from requirements through testing and deployment readiness.",
+    type: "Privacy-first community / social platform",
+    role: "Project Manager",
+    description: "Managed product delivery across frontend, backend, QA, and stakeholder coordination for a privacy-first community platform. My responsibilities included sprint planning, backlog coordination, requirements clarification, QA workflows, release readiness, and ongoing stakeholder communication.",
     image: "/assets/indox.png",
-    tags: ["Project Management", "Remote Team", "Web Platform", "QA Coordination"],
+    tags: ["Product Delivery", "Agile", "QA Coordination", "Remote Team", "Web Platform"],
   },
   {
     id: 2,
     title: "Voyage",
-    orbit: "AI education platform",
-    meta: "AI Platform · International Education",
-    description: "An AI-powered platform supporting international student success through data-driven insights and targeted outreach. I managed delivery planning, stakeholder communication, and cross-functional coordination to keep requirements, priorities, and feature execution aligned.",
+    type: "AI-powered international student success platform",
+    role: "Project Manager",
+    description: "Coordinated project planning and delivery for an AI-powered platform supporting international student success. I worked across stakeholders, design, development, and product teams to manage requirements, priorities, communication, and feature delivery throughout the product lifecycle.",
     image: "/assets/voyage.png",
-    link: "#",
-    tags: ["AI Product", "EdTech", "Stakeholder Management", "Delivery Planning"],
+    tags: ["AI Product", "EdTech", "Stakeholder Management", "Product Delivery", "Remote Collaboration"],
   },
   {
     id: 3,
     title: "TekenAja!",
-    orbit: "Secure document product",
-    meta: "Digital Signature · Mobile Product",
-    description: "A secure digital-signature platform that enables users to sign and manage documents remotely. I supported requirement gathering, feature delivery, testing coordination, project documentation, and communication between business and technical teams.",
+    type: "Digital signature platform",
+    role: "IT Project Manager",
+    description: "Coordinated feature delivery for a secure digital-signature platform, working between business stakeholders and technical teams. My responsibilities included requirement gathering, development and testing coordination, project documentation, progress reporting, and client alignment.",
     image: "/assets/dtb.png",
-    link: "#",
-    tags: ["Mobile Application", "Requirements", "Documentation", "Client Coordination"],
+    tags: ["Digital Product", "Requirements", "UAT / QA", "Documentation", "Client Coordination"],
   },
 ];
 
@@ -46,7 +44,7 @@ export default function Projects() {
           <div>
             <p className="section-label">Selected work</p>
             <h2 className="max-w-[700px] font-serif-display text-[clamp(3.3rem,8vw,7.8rem)] font-normal leading-[0.92] tracking-[-0.04em]">
-              Selected objects in my orbit.
+              Three products. One delivery thread.
             </h2>
           </div>
           <p className="max-w-xs text-sm leading-7 text-[#9d98a3]">
@@ -78,9 +76,9 @@ export default function Projects() {
               <div>
                 <p className="flex items-center gap-2.5 text-[10px] uppercase tracking-[0.15em] text-[#f2eee8]/45">
                   <span className="h-[7px] w-[7px] rounded-full bg-[#b04d6b] shadow-[0_0_12px_rgba(176,77,107,0.75)]" />
-                  Orbit {String(project.id).padStart(2, "0")} · {project.orbit}
+                  Orbit {String(project.id).padStart(2, "0")} · {project.type}
                 </p>
-                <p className="mt-4 text-xs font-semibold uppercase tracking-[0.15em] text-[#b04d6b]">{project.meta}</p>
+                <p className="mt-4 text-xs font-semibold uppercase tracking-[0.15em] text-[#b04d6b]">{project.role}</p>
                 <h3 className="my-4 font-serif-display text-[clamp(2.8rem,5vw,4.8rem)] font-normal leading-[0.95]">{project.title}</h3>
                 <p className="text-sm leading-7 text-[#9d98a3] sm:text-base">{project.description}</p>
                 <div className="mt-6 flex flex-wrap gap-2">
@@ -88,12 +86,12 @@ export default function Projects() {
                     <span key={tag} className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-[#9d98a3]">{tag}</span>
                   ))}
                 </div>
-                {project.link && project.link !== "#" ? (
+                {project.link ? (
                   <motion.a href={project.link} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-3 text-sm font-semibold" whileHover={{ x: 5 }}>
                     View project story <span>→</span>
                   </motion.a>
                 ) : (
-                  <p className="mt-8 text-xs uppercase tracking-[0.12em] text-white/35">Project overview</p>
+                  <p className="mt-8 text-xs uppercase tracking-[0.12em] text-white/35">Contribution overview</p>
                 )}
               </div>
             </motion.article>

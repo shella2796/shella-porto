@@ -3,9 +3,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { TbDownload } from "react-icons/tb";
 
 const navigation = [
+  { id: "projects", label: "Work" },
+  { id: "expertise", label: "Expertise" },
+  { id: "experience", label: "Experience" },
   { id: "about", label: "About" },
-  { id: "skills", label: "Skills" },
-  { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -45,10 +46,10 @@ export default function Navbar() {
           >
             SW
           </motion.span>
-          <span className="text-sm transition-colors group-hover:text-[#b04d6b]">Shella Waramena</span>
+          <span className="text-sm transition-colors group-hover:text-[#b04d6b]">SW <span className="text-white/30">|</span> Shella Waramena</span>
         </button>
 
-        <nav className="hidden items-center gap-7 text-sm text-[#9d98a3] lg:flex" aria-label="Primary navigation">
+        <nav className="hidden items-center gap-5 text-sm text-[#9d98a3] lg:flex xl:gap-7" aria-label="Primary navigation">
           {navigation.map(({ id, label }) => (
             <button key={id} type="button" onClick={() => scrollToSection(id)} className="transition-colors hover:text-[#f3efe9]">
               {label}

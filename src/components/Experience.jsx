@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { TbDownload } from "react-icons/tb";
 
 const experiences = [
   {
@@ -86,6 +87,9 @@ export default function Experience() {
             </motion.article>
           ))}
         </div>
+        <motion.a href="/cv.pdf" download rel="noopener noreferrer" className="mt-10 inline-flex min-h-12 items-center gap-2 rounded-full border border-white/15 px-6 text-sm font-semibold transition-colors hover:border-white/45" whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
+          View Full Resume <TbDownload size={17} />
+        </motion.a>
       </div>
     </section>
   );

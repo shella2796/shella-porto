@@ -17,14 +17,11 @@ export default function Intro() {
         <div className="max-w-3xl">
           <p className="section-label">The short version</p>
           <h2 className="font-serif-display text-[clamp(2.7rem,5vw,5rem)] font-normal leading-none tracking-[-0.03em]">
-            Clear processes. Practical coordination. Reliable delivery.
+            Project management without the unnecessary theatre.
           </h2>
-          <div className="mt-8 space-y-5 text-base leading-8 text-[#9d98a3] sm:text-[1.05rem]">
+          <div className="mt-8 text-base leading-8 text-[#9d98a3] sm:text-[1.05rem]">
             <p>
-              I’m a <strong className="font-medium text-[#f3efe9]">Digital Project Manager</strong> with more than five years of experience delivering software, SaaS, EdTech, and digital transformation initiatives.
-            </p>
-            <p>
-              I work across development, design, QA, clients, vendors, and business stakeholders—bringing clarity to requirements, priorities, documentation, risks, and delivery.
+              I work across developers, designers, QA engineers, clients, vendors, and internal stakeholders to keep requirements clear, priorities realistic, documentation useful, and delivery moving.
             </p>
           </div>
         </div>

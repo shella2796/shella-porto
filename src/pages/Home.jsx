@@ -159,16 +159,16 @@ export default function Home() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <p className="mb-7 text-xs uppercase tracking-[0.15em] text-[#9d98a3] sm:mb-8 sm:text-sm">
-            Digital Project Manager · Indonesia
+            Digital / IT Project Manager
           </p>
           <h1 className="font-serif-display text-[clamp(3.3rem,14vw,6rem)] font-normal leading-[0.92] tracking-[-0.04em] lg:text-[clamp(4rem,7.5vw,7.8rem)]">
-            <span className="block">I bring order</span>
+            <span className="block">I turn messy requirements</span>
             <span className="relative block text-transparent [-webkit-text-stroke:1px_rgba(242,238,232,0.68)] after:absolute after:bottom-[-15px] after:left-1 after:h-0.5 after:w-[90px] after:bg-gradient-to-r after:from-[#b04d6b] after:to-transparent">
-              to digital chaos.
+              into products that actually ship.
             </span>
           </h1>
           <p className="mt-10 max-w-[660px] text-base leading-7 text-[#9d98a3] sm:text-lg">
-            I help cross-functional teams turn complex requirements into clear plans, aligned execution, and reliable digital product delivery—from early discovery through launch.
+            IT Project Manager with 5+ years of experience working across software, SaaS, EdTech, and digital products. I coordinate people, requirements, timelines, QA, stakeholders, and releases from idea to production.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -179,7 +179,7 @@ export default function Home() {
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
             >
-              Explore my orbit <TbArrowDownRight size={18} />
+              View Selected Work <TbArrowDownRight size={18} />
             </motion.button>
             <motion.a
               href="/cv.pdf"
@@ -189,7 +189,7 @@ export default function Home() {
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
             >
-              Download resume <TbDownload size={17} />
+              View Resume <TbDownload size={17} />
             </motion.a>
           </div>
 
@@ -212,8 +212,8 @@ export default function Home() {
 
           <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-[10px] uppercase tracking-[0.17em] text-[#f2eee8]/40 lg:mt-14">
             <span>Indonesia</span>
-            <span>Remote collaboration</span>
-            <span>Open to remote project management opportunities</span>
+            <span>Remote</span>
+            <span>5+ years in project delivery</span>
           </div>
         </motion.div>
 

@@ -4,28 +4,30 @@ const capabilities = [
   {
     number: "01",
     title: "Project Delivery",
-    description: "I turn business goals into practical scopes, timelines, priorities, ownership, risk plans, and clear paths toward release.",
+    description: "Scope, roadmaps, sprint planning, priorities, timelines, risks, and releases.",
   },
   {
     number: "02",
     title: "Cross-functional Coordination",
-    description: "I align developers, designers, QA, operations, clients, and vendors so decisions, dependencies, and responsibilities remain visible.",
+    description: "Developers, QA, design, operations, clients, vendors, and leadership.",
   },
   {
     number: "03",
-    title: "Documentation Systems",
-    description: "I create and maintain project records, meeting outcomes, requirements, version controls, and documentation that teams can reliably use.",
+    title: "Product & Requirements",
+    description: "Requirement gathering, user stories, acceptance criteria, feature clarification, and UAT support.",
   },
   {
     number: "04",
-    title: "Stakeholder Communication",
-    description: "I provide concise updates on progress, risks, decisions, blockers, and next steps—giving stakeholders the context they need to act.",
+    title: "Documentation & Operations",
+    description: "BRD, FSD, SOP, MoM, process documentation, document control, reporting, and version management.",
   },
 ];
 
+const tools = ["ClickUp", "Jira", "Asana", "GitHub", "Figma", "Slack"];
+
 export default function Skills() {
   return (
-    <section id="skills" className="scroll-mt-20 border-t border-white/10 bg-[#050507] py-24 sm:py-28 lg:py-[120px]">
+    <section id="expertise" className="scroll-mt-20 border-t border-white/10 bg-[#050507] py-24 sm:py-28 lg:py-[120px]">
       <div className="mx-auto w-[min(calc(100%-28px),1200px)] lg:w-[min(calc(100%-40px),1200px)]">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
@@ -54,6 +56,12 @@ export default function Skills() {
               <p className="mt-3 max-w-md text-sm leading-7 text-[#9d98a3]">{capability.description}</p>
             </motion.article>
           ))}
+        </div>
+        <div className="mt-10 flex flex-col gap-5 border-b border-white/10 pb-10 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-xs uppercase tracking-[0.16em] text-[#f3efe9]/45">Tools I work with</p>
+          <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#9d98a3]" aria-label="Project management and collaboration tools">
+            {tools.map((tool) => <li key={tool}>{tool}</li>)}
+          </ul>
         </div>
       </div>
     </section>
