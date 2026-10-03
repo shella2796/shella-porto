@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portfolio of Shella Waramena, a Digital Project Manager specializing in product delivery, remote collaboration, and documentation systems."
+  />
+
+  <title>Shella Waramena | Digital Project Manager</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #050507;
+      --bg-soft: #0b0b10;
+      --bg-card: #111118;
+      --text: #f3efe9;
+      --text-muted: #9d98a3;
+      --line: rgba(255, 255, 255, 0.12);
+      --accent: #743247;
+      --accent-light: #b04d6b;
+      --violet: #7354b8;
+      --max-width: 1200px;
+      --radius: 20px;
+      --transition: 260ms ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 12% 9%, rgba(116, 50, 71, 0.16), transparent 28%),
+        radial-gradient(circle at 90% 18%, rgba(91, 70, 152, 0.12), transparent 24%),
+        var(--bg);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      pointer-events: none;
+      opacity: 0.025;
+      background-image:
+        repeating-radial-gradient(
+          circle at 0 0,
+          transparent 0,
+          #ffffff 1px,
+          transparent 2px
+        );
+      background-size: 8px 8px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 120px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 34px;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .section-label::before {
+      content: "";
+      width: 32px;
+      height: 1px;
+      background: var(--accent-light);
+    }
+
+    .display-title {
+      font-family: "Instrument Serif", serif;
+      font-size: clamp(3.2rem, 8vw, 7.8rem);
+      font-weight: 400;
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+    }
+
+    .muted {
+      color: var(--text-muted);
+    }
+
+    .accent {
+      color: var(--accent-light);
+    }
+
+    .navbar {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 100;
+      background: rgba(5, 5, 7, 0.78);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 600;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 50%;
+      font-size: 0.72rem;
+      letter-spacing: -0.04em;
+      box-shadow: 0 0 24px rgba(176, 77, 107, 0.16);
+    }
+
+    .brand-name {
+      font-size: 0.9rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      color: var(--text-muted);
+      font-size: 0.86rem;
+    }
+
+    .nav-links a {
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-contact {
+      padding: 10px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--text) !important;
+    }
+
+    .nav-contact:hover {
+      background: var(--text);
+      color: var(--bg) !important;
+    }
+
+    .menu-button {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .galaxy-hero {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      isolation: isolate;
+      background:
+        radial-gradient(circle at 72% 42%, rgba(76, 42, 120, 0.22), transparent 26%),
+        radial-gradient(circle at 20% 20%, rgba(125, 39, 56, 0.17), transparent 28%),
+        linear-gradient(145deg, #050505 0%, #090812 45%, #050505 100%);
+    }
+
+    #starCanvas {
+      position: absolute;
+      inset: 0;
+      z-index: -4;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .galaxy-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: -3;
+    }
+
+    .galaxy-glow-one {
+      width: 380px;
+      height: 380px;
+      top: 12%;
+      right: 9%;
+      background: rgba(101, 62, 170, 0.13);
+    }
+
+    .galaxy-glow-two {
+      width: 320px;
+      height: 320px;
+      bottom: 4%;
+      left: 4%;
+      background: rgba(147, 48, 75, 0.1);
+    }
+
+    .hero-galaxy-grid {
+      min-height: calc(100vh - 100px);
+      padding-top: 130px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.95fr);
+      align-items: center;
+      gap: 70px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 4;
+    }
+
+    .hero-eyebrow {
+      margin-bottom: 34px;
+      color: var(--text-muted);
+      font-size: 0.84rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .hero-title span {
+      display: block;
+    }
+
+    .hero-title .outlined {
+      position: relative;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(242, 238, 232, 0.68);
+    }
+
+    .hero-title .outlined::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      bottom: -15px;
+      width: 90px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-light), transparent);
+    }
+
+    .hero-copy {
+      max-width: 660px;
+      margin-top: 40px;
+      color: var(--text-muted);
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+    }
+
+    .hero-copy strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 38px;
+    }
+
+    .button {
+      min-height: 50px;
+      padding: 0 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition),
+        border-color var(--transition);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    .button-primary:hover {
+      background: var(--accent-light);
+      color: white;
+      border-color: var(--accent-light);
+    }
+
+    .button-secondary:hover {
+      border-color: rgba(255, 255, 255, 0.45);
+    }
+
+    .hero-coordinates {
+      margin-top: 70px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 24px;
+      color: rgba(242, 238, 232, 0.38);
+      font-size: 0.68rem;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    .orbit-system {
+      position: relative;
+      width: min(44vw, 560px);
+      aspect-ratio: 1;
+      margin-inline: auto;
+      display: grid;
+      place-items: center;
+    }
+
+    .orbit-system::before {
+      content: "";
+      position: absolute;
+      inset: 8%;
+      border-radius: 50%;
+      background:
+        radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.045) 0%,
+          rgba(255, 255, 255, 0.01) 42%,
+          transparent 68%
+        );
+      filter: blur(10px);
+    }
+
+    .orbit {
+      position: absolute;
+      border: 1px solid rgba(242, 238, 232, 0.16);
+      border-radius: 50%;
+      transform: rotate(-18deg);
+    }
+
+    .orbit::after {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      border-top: 1px solid rgba(176, 77, 107, 0.72);
+      border-right: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      border-left: 1px solid transparent;
+    }
+
+    .orbit-one {
+      width: 42%;
+      height: 42%;
+      animation: orbitSpin 16s linear infinite;
+    }
+
+    .orbit-two {
+      width: 68%;
+      height: 68%;
+      animation: orbitSpinReverse 24s linear infinite;
+    }
+
+    .orbit-three {
+      width: 94%;
+      height: 94%;
+      animation: orbitSpin 34s linear infinite;
+    }
+
+    .orbit-label {
+      position: absolute;
+      padding: 5px 9px;
+      background: rgba(8, 8, 12, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      border-radius: 999px;
+      color: rgba(242, 238, 232, 0.55);
+      font-size: 0.6rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      backdrop-filter: blur(10px);
+    }
+
+    .orbit-label-one {
+      top: -12px;
+      left: 47%;
+    }
+
+    .orbit-label-two {
+      right: -18px;
+      top: 52%;
+    }
+
+    .orbit-label-three {
+      bottom: 8%;
+      left: 4%;
+    }
+
+    .orbit-core {
+      position: relative;
+      z-index: 4;
+      width: 31%;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 1px solid rgba(242, 238, 232, 0.3);
+      background:
+        radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.17), transparent 26%),
+        linear-gradient(145deg, rgba(125, 39, 56, 0.9), rgba(31, 20, 48, 0.94));
+      box-shadow:
+        0 0 45px rgba(125, 39, 56, 0.28),
+        0 0 110px rgba(91, 56, 140, 0.13),
+        inset 0 0 35px rgba(255, 255, 255, 0.05);
+    }
+
+    .core-inner {
+      text-align: center;
+    }
+
+    .core-initials {
+      display: block;
+      font-family: "Instrument Serif", serif;
+      font-size: clamp(2.3rem, 5vw, 4.7rem);
+      line-height: 0.85;
+    }
+
+    .core-title {
+      display: block;
+      margin-top: 10px;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.56rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .orbit-planet {
+      position: absolute;
+      z-index: 5;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.19), transparent 24%),
+        #111018;
+      box-shadow:
+        0 0 25px rgba(117, 77, 177, 0.22),
+        inset 0 0 18px rgba(255, 255, 255, 0.04);
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.58rem;
+      letter-spacing: 0.08em;
+    }
+
+    .planet-one {
+      width: 42px;
+      height: 42px;
+      top: 17%;
+      right: 22%;
+      animation: planetFloat 4.8s ease-in-out infinite;
+    }
+
+    .planet-two {
+      width: 55px;
+      height: 55px;
+      top: 48%;
+      right: 1%;
+      animation: planetFloat 6s ease-in-out infinite reverse;
+    }
+
+    .planet-three {
+      width: 47px;
+      height: 47px;
+      bottom: 4%;
+      left: 25%;
+      animation: planetFloat 5.4s ease-in-out infinite;
+    }
+
+    .planet-four {
+      width: 38px;
+      height: 38px;
+      top: 25%;
+      left: 4%;
+      animation: planetFloat 4.2s ease-in-out infinite reverse;
+    }
+
+    .orbit-moon {
+      position: absolute;
+      top: 5%;
+      right: 10%;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #f2eee8;
+      box-shadow:
+        0 0 12px rgba(255, 255, 255, 0.9),
+        0 0 30px rgba(255, 255, 255, 0.3);
+    }
+
+    .scroll-note {
+      padding-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .scroll-line {
+      flex: 1;
+      height: 1px;
+      margin-left: 24px;
+      background: var(--line);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .intro-number {
+      color: var(--accent-light);
+      font-family: "Instrument Serif", serif;
+      font-size: clamp(5rem, 10vw, 10rem);
+      line-height: 0.8;
+      text-shadow: 0 0 40px rgba(176, 77, 107, 0.16);
+    }
+
+    .intro-copy {
+      max-width: 760px;
+    }
+
+    .intro-copy h2 {
+      margin-bottom: 34px;
+      font-family: "Instrument Serif", serif;
+      font-size: clamp(2.7rem, 5vw, 5rem);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .intro-copy p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    .intro-copy p + p {
+      margin-top: 22px;
+    }
+
+    .intro-copy strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .work-heading {
+      margin-bottom: 72px;
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      align-items: end;
+    }
+
+    .work-heading h2 {
+      max-width: 700px;
+    }
+
+    .work-heading p {
+      max-width: 320px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .project-list {
+      display: grid;
+      gap: 90px;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+      gap: 50px;
+      align-items: center;
+    }
+
+    .project:nth-child(even) .project-image {
+      order: 2;
+    }
+
+    .project-image {
+      position: relative;
+      overflow: hidden;
+      min-height: 460px;
+      background:
+        linear-gradient(160deg, rgba(115, 84, 184, 0.16), transparent 40%),
+        var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 30px 100px rgba(0, 0, 0, 0.28);
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 460px;
+      object-fit: cover;
+      filter: grayscale(100%) contrast(1.08);
+      transition:
+        filter 500ms ease,
+        transform 700ms ease;
+    }
+
+    .project:hover .project-image img {
+      filter: grayscale(15%);
+      transform: scale(1.025);
+    }
+
+    .project-index {
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      z-index: 2;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      background: rgba(10, 10, 10, 0.78);
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      backdrop-filter: blur(10px);
+      font-size: 0.72rem;
+    }
+
+    .project-orbit-status {
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(242, 238, 232, 0.42);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .project-orbit-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      box-shadow: 0 0 12px rgba(176, 77, 107, 0.75);
+    }
+
+    .project-meta {
+      color: var(--accent-light);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .project-content h3 {
+      margin: 18px 0;
+      font-family: "Instrument Serif", serif;
+      font-size: clamp(2.8rem, 5vw, 4.8rem);
+      font-weight: 400;
+      line-height: 0.95;
+    }
+
+    .project-content p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 26px;
+    }
+
+    .tag {
+      padding: 7px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--text-muted);
+      font-size: 0.72rem;
+    }
+
+    .project-link {
+      margin-top: 32px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .project-link span {
+      transition: transform var(--transition);
+    }
+
+    .project-link:hover span {
+      transform: translateX(5px);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border-top: 1px solid var(--line);
+    }
+
+    .service-item {
+      min-height: 280px;
+      padding: 38px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      transition: background var(--transition);
+    }
+
+    .service-item:nth-child(even) {
+      border-right: 0;
+    }
+
+    .service-item:hover {
+      background:
+        radial-gradient(circle at top right, rgba(115, 84, 184, 0.1), transparent 40%),
+        var(--bg-soft);
+    }
+
+    .service-number {
+      margin-bottom: 70px;
+      color: var(--accent-light);
+      font-size: 0.76rem;
+    }
+
+    .service-item h3 {
+      margin-bottom: 14px;
+      font-family: "Instrument Serif", serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+    }
+
+    .service-item p {
+      max-width: 430px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .experience-header {
+      margin-bottom: 62px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: end;
+    }
+
+    .experience-header p {
+      max-width: 440px;
+      color: var(--text-muted);
+    }
+
+    .timeline {
+      border-top: 1px solid var(--line);
+    }
+
+    .timeline-item {
+      padding: 30px 0;
+      display: grid;
+      grid-template-columns: 160px 1fr auto;
+      gap: 30px;
+      align-items: start;
+      border-bottom: 1px solid var(--line);
+      transition:
+        padding var(--transition),
+        background var(--transition);
+    }
+
+    .timeline-item:hover {
+      padding-left: 18px;
+      padding-right: 18px;
+      background: var(--bg-soft);
+    }
+
+    .timeline-year {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    .timeline-role h3 {
+      margin-bottom: 5px;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .timeline-role p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .timeline-type {
+      color: var(--accent-light);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .personal-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .personal-section::after {
+      content: "SW";
+      position: absolute;
+      right: -40px;
+      bottom: -140px;
+      color: rgba(255, 255, 255, 0.025);
+      font-family: "Instrument Serif", serif;
+      font-size: 25rem;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .personal-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .personal-quote {
+      color: var(--text);
+      font-family: "Instrument Serif", serif;
+      font-size: clamp(3rem, 6vw, 6rem);
+      font-weight: 400;
+      line-height: 0.95;
+    }
+
+    .personal-copy {
+      max-width: 600px;
+    }
+
+    .personal-copy p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .personal-copy p + p {
+      margin-top: 20px;
+    }
+
+    .contact-section {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-inner {
+      text-align: center;
+    }
+
+    .contact-inner h2 {
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .contact-inner p {
+      max-width: 580px;
+      margin: 34px auto 0;
+      color: var(--text-muted);
+    }
+
+    .contact-email {
+      margin-top: 42px;
+      display: inline-block;
+      color: var(--text);
+      font-family: "Instrument Serif", serif;
+      font-size: clamp(1.5rem, 4vw, 3.3rem);
+      border-bottom: 1px solid var(--accent-light);
+      transition: color var(--transition);
+    }
+
+    .contact-email:hover {
+      color: var(--accent-light);
+    }
+
+    footer {
+      padding: 30px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition:
+        opacity 800ms ease,
+        transform 800ms ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes orbitSpin {
+      from { transform: rotate(-18deg); }
+      to { transform: rotate(342deg); }
+    }
+
+    @keyframes orbitSpinReverse {
+      from { transform: rotate(18deg); }
+      to { transform: rotate(-342deg); }
+    }
+
+    @keyframes planetFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @media (max-width: 900px) {
+      .hero-galaxy-grid,
+      .intro-grid,
+      .project,
+      .experience-header,
+      .personal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-galaxy-grid {
+        padding-top: 140px;
+        padding-bottom: 70px;
+      }
+
+      .orbit-system {
+        width: min(88vw, 520px);
+        margin-top: 30px;
+      }
+
+      .hero-coordinates {
+        margin-top: 45px;
+      }
+
+      .project:nth-child(even) .project-image {
+        order: initial;
+      }
+
+      .project-image,
+      .project-image img {
+        min-height: 360px;
+      }
+
+      .work-heading {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-item {
+        border-right: 0;
+      }
+
+      .timeline-item {
+        grid-template-columns: 110px 1fr;
+      }
+
+      .timeline-type {
+        grid-column: 2;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 76px;
+        right: 20px;
+        left: 20px;
+        padding: 24px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(17, 17, 17, 0.98);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-button {
+        display: block;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(calc(100% - 28px), var(--max-width));
+      }
+
+      .section {
+        padding: 88px 0;
+      }
+
+      .display-title {
+        font-size: clamp(3.3rem, 17vw, 5.5rem);
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .orbit-system {
+        width: min(94vw, 390px);
+      }
+
+      .orbit-label {
+        display: none;
+      }
+
+      .planet-two {
+        right: -2%;
+      }
+
+      .hero-coordinates {
+        gap: 8px 14px;
+        font-size: 0.58rem;
+      }
+
+      .project-list {
+        gap: 72px;
+      }
+
+      .project-image,
+      .project-image img {
+        min-height: 280px;
+      }
+
+      .service-item {
+        padding: 28px 20px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .timeline-type {
+        grid-column: auto;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand" aria-label="Shella Waramena home">
+        <span class="brand-mark">SW</span>
+        <span class="brand-name">Shella Waramena</span>
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#work">Selected Work</a>
+        <a href="#services">What I Do</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="galaxy-hero" id="home">
+      <canvas id="starCanvas" aria-hidden="true"></canvas>
+
+      <div class="galaxy-glow galaxy-glow-one"></div>
+      <div class="galaxy-glow galaxy-glow-two"></div>
+
+      <div class="container hero-galaxy-grid">
+        <div class="hero-content reveal">
+          <p class="hero-eyebrow">
+            Digital Project Manager · Indonesia
+          </p>
+
+          <h1 class="display-title hero-title">
+            <span>I bring order</span>
+            <span class="outlined">to digital chaos.</span>
+          </h1>
+
+          <p class="hero-copy">
+            I coordinate people, priorities, documentation, and delivery across
+            digital product teams, turning unclear ideas into work that actually
+            reaches completion.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#work" class="button button-primary">
+              Explore my orbit
+              <span>↘</span>
+            </a>
+
+            <a
+              href="/assets/Shella-Waramena-CV.pdf"
+              class="button button-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View résumé
+            </a>
+          </div>
+
+          <div class="hero-coordinates">
+            <span>Indonesia</span>
+            <span>Remote collaboration</span>
+            <span>Available for selected opportunities</span>
+          </div>
+        </div>
+
+        <div class="orbit-system reveal" aria-label="Shella's professional orbit">
+          <div class="orbit orbit-one">
+            <span class="orbit-label orbit-label-one">Delivery</span>
+          </div>
+
+          <div class="orbit orbit-two">
+            <span class="orbit-label orbit-label-two">People</span>
+          </div>
+
+          <div class="orbit orbit-three">
+            <span class="orbit-label orbit-label-three">Systems</span>
+          </div>
+
+          <div class="orbit-core">
+            <div class="core-inner">
+              <span class="core-initials">SW</span>
+              <span class="core-title">Project Manager</span>
+            </div>
+          </div>
+
+          <div class="orbit-planet planet-one"><span>PM</span></div>
+          <div class="orbit-planet planet-two"><span>QA</span></div>
+          <div class="orbit-planet planet-three"><span>DOC</span></div>
+          <div class="orbit-planet planet-four"><span>DEV</span></div>
+          <div class="orbit-moon"></div>
+        </div>
+      </div>
+
+      <div class="container scroll-note">
+        <span>Scroll through the system</span>
+        <span class="scroll-line"></span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container intro-grid reveal">
+        <div class="intro-number">5+</div>
+
+        <div class="intro-copy">
+          <span class="section-label">The short version</span>
+
+          <h2>
+            Project management without the unnecessary theatre.
+          </h2>
+
+          <p>
+            I am a process-driven <strong>Digital Project Manager</strong> with
+            more than five years of experience coordinating software, digital
+            learning, SaaS, and content-development initiatives.
+          </p>
+
+          <p>
+            I work across developers, designers, QA engineers, clients, vendors,
+            and internal stakeholders to keep requirements clear, priorities
+            realistic, documentation useful, and delivery moving.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="container">
+        <div class="work-heading reveal">
+          <div>
+            <span class="section-label">Selected work</span>
+
+            <h2 class="display-title">
+              Selected objects in my orbit.
+            </h2>
+          </div>
+
+          <p>
+            Each project entered with its own gravity: people, priorities,
+            constraints, deadlines, and unresolved questions. My role was to
+            keep the system moving.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="project reveal">
+            <div class="project-image">
+              <span class="project-index">01</span>
+              <img
+                src="/assets/indoxnito-project.jpg"
+                alt="Indoxnito platform displayed on a device"
+              />
+            </div>
+
+            <div class="project-content">
+              <div class="project-orbit-status">
+                <span class="project-orbit-dot"></span>
+                <span>Orbit 01 · Privacy-first community platform</span>
+              </div>
+
+              <p class="project-meta">Community Platform · Product Delivery</p>
+
+              <h3>Indoxnito</h3>
+
+              <p>
+                A privacy-first community platform designed for anonymous
+                discussion, engagement, and topic-based communities. I managed
+                delivery across frontend, backend, QA, stakeholder alignment,
+                sprint execution, backlog priorities, and deployment readiness.
+              </p>
+
+              <div class="project-tags">
+                <span class="tag">Project Management</span>
+                <span class="tag">Remote Team</span>
+                <span class="tag">Web Platform</span>
+                <span class="tag">QA Coordination</span>
+              </div>
+
+              <a href="#" class="project-link">
+                View project story <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-image">
+              <span class="project-index">02</span>
+              <img
+                src="/assets/voyage-project.jpg"
+                alt="Voyage platform displayed on a laptop"
+              />
+            </div>
+
+            <div class="project-content">
+              <div class="project-orbit-status">
+                <span class="project-orbit-dot"></span>
+                <span>Orbit 02 · AI education platform</span>
+              </div>
+
+              <p class="project-meta">AI Platform · International Education</p>
+
+              <h3>Voyage</h3>
+
+              <p>
+                An AI-powered platform supporting international student success
+                through data-driven insight and targeted outreach. I coordinated
+                project planning, stakeholder communication, cross-functional
+                execution, and feature delivery throughout the product lifecycle.
+              </p>
+
+              <div class="project-tags">
+                <span class="tag">AI Product</span>
+                <span class="tag">EdTech</span>
+                <span class="tag">Stakeholder Management</span>
+                <span class="tag">Delivery Planning</span>
+              </div>
+
+              <a href="#" class="project-link">
+                View project story <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-image">
+              <span class="project-index">03</span>
+              <img
+                src="/assets/tekenaja-project.jpg"
+                alt="TekenAja digital signature platform displayed on a laptop"
+              />
+            </div>
+
+            <div class="project-content">
+              <div class="project-orbit-status">
+                <span class="project-orbit-dot"></span>
+                <span>Orbit 03 · Secure document product</span>
+              </div>
+
+              <p class="project-meta">Digital Signature · Mobile Product</p>
+
+              <h3>TekenAja!</h3>
+
+              <p>
+                A secure digital-signature platform that enables users to sign
+                and manage documents remotely. I supported feature delivery,
+                requirement gathering, project documentation, testing progress,
+                management reporting, and coordination between business and
+                technical teams.
+              </p>
+
+              <div class="project-tags">
+                <span class="tag">Mobile Application</span>
+                <span class="tag">Requirements</span>
+                <span class="tag">Documentation</span>
+                <span class="tag">Client Coordination</span>
+              </div>
+
+              <a href="#" class="project-link">
+                View project story <span>→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">What I actually do</span>
+
+          <h2 class="display-title" style="max-width: 850px; margin-bottom: 70px;">
+            Less buzzword. More delivery.
+          </h2>
+        </div>
+
+        <div class="services-grid reveal">
+          <article class="service-item">
+            <p class="service-number">01</p>
+            <h3>Project delivery</h3>
+            <p>
+              Translating goals into plans, priorities, timelines, ownership,
+              risk visibility, and realistic paths toward release.
+            </p>
+          </article>
+
+          <article class="service-item">
+            <p class="service-number">02</p>
+            <h3>Cross-functional coordination</h3>
+            <p>
+              Connecting developers, QA, design, operations, clients, vendors,
+              and leadership without letting context disappear between them.
+            </p>
+          </article>
+
+          <article class="service-item">
+            <p class="service-number">03</p>
+            <h3>Documentation systems</h3>
+            <p>
+              Managing naming standards, document versions, project records,
+              meeting outcomes, catalogues, and information people can actually
+              retrieve later.
+            </p>
+          </article>
+
+          <article class="service-item">
+            <p class="service-number">04</p>
+            <h3>Stakeholder communication</h3>
+            <p>
+              Providing clear updates, decisions, expectations, blockers, and
+              follow-through without drowning everyone in decorative reports.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="experience-header reveal">
+          <div>
+            <span class="section-label">Experience</span>
+            <h2 class="display-title">Work, over time.</h2>
+          </div>
+
+          <p>
+            A compressed version, because a homepage does not need to become a
+            complete archaeological record of every task ever performed.
+          </p>
+        </div>
+
+        <div class="timeline reveal">
+          <article class="timeline-item">
+            <p class="timeline-year">2024–Present</p>
+            <div class="timeline-role">
+              <h3>IT Project Coordinator & Document Controller</h3>
+              <p>RemoHires</p>
+            </div>
+            <p class="timeline-type">Remote</p>
+          </article>
+
+          <article class="timeline-item">
+            <p class="timeline-year">2024–2026</p>
+            <div class="timeline-role">
+              <h3>IT Project Manager</h3>
+              <p>Xcidic Pte Ltd</p>
+            </div>
+            <p class="timeline-type">Remote</p>
+          </article>
+
+          <article class="timeline-item">
+            <p class="timeline-year">2022–2024</p>
+            <div class="timeline-role">
+              <h3>Project Manager</h3>
+              <p>PT Centrinova Solusi Edukasi</p>
+            </div>
+            <p class="timeline-type">Hybrid</p>
+          </article>
+
+          <article class="timeline-item">
+            <p class="timeline-year">2021–2022</p>
+            <div class="timeline-role">
+              <h3>IT Project Manager</h3>
+              <p>PT Djelas Tandatangan Bersama</p>
+            </div>
+            <p class="timeline-type">On-site</p>
+          </article>
+
+          <article class="timeline-item">
+            <p class="timeline-year">Earlier</p>
+            <div class="timeline-role">
+              <h3>Project Manager</h3>
+              <p>PT Pratama Abadi Industri</p>
+            </div>
+            <p class="timeline-type">Product</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section personal-section" id="about">
+      <div class="container personal-grid reveal">
+        <h2 class="personal-quote">
+          Structure, <span class="accent">with a pulse.</span>
+        </h2>
+
+        <div class="personal-copy">
+          <span class="section-label">Beyond the timeline</span>
+
+          <p>
+            I am a project manager, lecturer, documentation enthusiast, and
+            occasional code tinkerer. I like systems, clarity, honest
+            communication, dark interfaces, and work that serves an actual purpose.
+          </p>
+
+          <p>
+            My approach is calm but direct. I ask uncomfortable questions before
+            they become expensive problems, document decisions before everyone
+            remembers them differently, and keep teams moving without pretending
+            every setback is a “valuable opportunity.”
+          </p>
+
+          <p>
+            I care about making complicated work feel more manageable for the
+            people doing it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-inner reveal">
+        <span class="section-label">Contact</span>
+
+        <h2 class="display-title">
+          Have a complicated project?
+        </h2>
+
+        <p>
+          I work with teams that need stronger project coordination, clearer
+          documentation, better stakeholder communication, and fewer mysteries
+          hiding inside the backlog.
+        </p>
+
+        <a class="contact-email" href="mailto:shellawaramena@gmail.com">
+          shellawaramena@gmail.com
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="currentYear"></span> Shella Waramena</p>
+
+      <div class="footer-links">
+        <a
+          href="https://www.linkedin.com/in/shellawaramena"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/shella2796"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a href="#home">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const navLinks = document.getElementById("navLinks");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.textContent = isOpen ? "Close" : "Menu";
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "Menu";
+      });
+    });
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    revealElements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    const canvas = document.getElementById("starCanvas");
+    const context = canvas.getContext("2d");
+
+    let stars = [];
+
+    function resizeCanvas() {
+      const hero = document.querySelector(".galaxy-hero");
+
+      canvas.width = hero.offsetWidth;
+      canvas.height = hero.offsetHeight;
+
+      createStars();
+    }
+
+    function createStars() {
+      const starCount = Math.min(
+        170,
+        Math.floor((canvas.width * canvas.height) / 8500)
+      );
+
+      stars = Array.from({ length: starCount }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 1.25 + 0.2,
+        alpha: Math.random() * 0.65 + 0.15,
+        speed: Math.random() * 0.003 + 0.001,
+        phase: Math.random() * Math.PI * 2
+      }));
+    }
+
+    function drawStars(time) {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+
+      stars.forEach((star) => {
+        const flicker =
+          star.alpha +
+          Math.sin(time * star.speed + star.phase) * 0.16;
+
+        context.beginPath();
+        context.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+
+        context.fillStyle = `rgba(242, 238, 232, ${Math.max(
+          0.05,
+          flicker
+        )})`;
+
+        context.fill();
+      });
+
+      requestAnimationFrame(drawStars);
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+
+    resizeCanvas();
+    requestAnimationFrame(drawStars);
+  </script>
+</body>
+</html>

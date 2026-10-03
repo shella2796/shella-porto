@@ -1,49 +1,30 @@
-import { useEffect, useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useRef } from 'react';
+import { useReducedMotion } from 'framer-motion';
 
 export default function CustomCursor() {
-  const reduceMotion = useReducedMotion();
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-  const [cursorSize, setCursorSize] = useState(32); // Default size
-
+  const cursor = useRef(null);
+  const reduced = useReducedMotion();
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      setCursorPosition({ x: e.clientX, y: e.clientY });
+    const media = window.matchMedia('(pointer: fine) and (min-width: 851px)');
+    if (reduced || !media.matches) return undefined;
+    const element = cursor.current;
+    const move = (event) => {
+      element.style.left = `${event.clientX}px`;
+      element.style.top = `${event.clientY}px`;
+      element.classList.add('cursor-visible');
+      element.classList.toggle('cursor-active', Boolean(event.target.closest('a, button, summary')));
     };
-
-    const handleMouseOverText = () => {
-      setCursorSize(80); // Increase cursor size when hovering over text
-    };
-
-    const handleMouseLeaveText = () => {
-      setCursorSize(32); // Reset cursor size when leaving text
-    };
-
-    // Select all text elements
-    const textElements = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6");
-
-    textElements.forEach((el) => {
-      el.addEventListener("mouseenter", handleMouseOverText);
-      el.addEventListener("mouseleave", handleMouseLeaveText);
-    });
-
-    window.addEventListener("mousemove", handleMouseMove);
-
+    const hide = () => element.classList.remove('cursor-visible');
+    window.addEventListener('pointermove', move, { passive: true });
+    document.documentElement.addEventListener('pointerleave', hide);
+    window.addEventListener('blur', hide);
+    media.addEventListener('change', hide);
     return () => {
-      textElements.forEach((el) => {
-        el.removeEventListener("mouseenter", handleMouseOverText);
-        el.removeEventListener("mouseleave", handleMouseLeaveText);
-      });
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener('pointermove', move);
+      document.documentElement.removeEventListener('pointerleave', hide);
+      window.removeEventListener('blur', hide);
+      media.removeEventListener('change', hide);
     };
-  }, []);
-
-  return (
-    <motion.div
-      className="pointer-events-none fixed z-50 hidden rounded-full bg-white mix-blend-difference [@media(pointer:fine)]:block"
-      style={{ width: cursorSize, height: cursorSize }}
-      animate={{ x: cursorPosition.x - cursorSize / 2, y: cursorPosition.y - cursorSize / 2 }}
-      transition={reduceMotion ? { duration: 0 } : { type: "spring", stiffness: 200, damping: 20 }}
-    />
-  );
+  }, [reduced]);
+  return <div ref={cursor} className="custom-cursor" aria-hidden="true" />;
 }

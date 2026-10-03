@@ -1,35 +1,24 @@
-# Portfolio Website
+# Shella Waramena — Portfolio
 
-This is a personal portfolio website built using Vite+React, Tailwind CSS, and Framer Motion to showcase my skills, projects, and experience.
+An editorial portfolio for an IT / Digital Project Manager, built with React, Vite, Tailwind CSS, and Framer Motion. The visual reference is `reference/redesign.html`.
 
-## Features
-- **Responsive Design** – Works on all screen sizes.
-- **Smooth Animations** – Powered by Framer Motion for interactive user experience.
-- **Dark Mode Support** – Stylish UI with light and dark theme toggling.
-- **Optimized Performance** – Efficient rendering and smooth navigation.
-- **SEO Friendly** – Optimized for better search engine visibility.
+## Development
 
-## Tech Stack
-- **Frontend:** React.js
-- **Styling:** Tailwind CSS
-- **Animations:** Framer Motion
+```sh
+npm install
+npm run dev
+```
 
-## Installation & Setup
+## Validation
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/sathishk-dev/illustration-portfolio.git
-   ```
-2. Navigate to the project directory:
-   ```sh
-   cd illustration-portfolio
-   ```
-3. Install dependencies:
-   ```sh
-   npm install
-   ```
-4. Start the development server:
-   ```sh
-   npm run dev
-   ```
-   The app will be available at `http://localhost:3000/`.
+```sh
+npm run build
+npm run lint
+npm run preview
+```
+
+## Content and assets
+
+Portfolio content is centralized in `src/data/portfolio.js`. Images and employer logos live in `public/assets`; the resume is `public/cv.pdf`. Employment dates retain the existing website's information.
+
+The page includes mobile navigation, expandable project contribution overviews, numbered sections, a capability marquee, and scroll reveals. Reduced-motion preferences disable animated entrances and marquee movement. Project imagery is labeled as illustrative mockups.
